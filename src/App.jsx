@@ -7,14 +7,15 @@ import AppRouter from './components/AppRouter';
 /*import { pokepro } from './data/getDataPokemon'*/
 import { MiContext } from './context/MiContext';
 
-const urlApi = 'https://pokeapi.co/api/v2/pokemon'
+const urlApi = 'https://pokeapi.co/api/v2/pokemon/'
 const App = () => {
-  const [dataPoke, setdataPoke] = useState ([]);
+  const [dataPoke, setDataPoke] = useState ([]);
 
 const getData = async()=>{
   const res = await fetch(urlApi)
   const data = await res.json()
-  setdataPoke(data.results)
+  setDataPoke(data.results)
+  
 }
 
 useEffect( ()=>{
@@ -23,7 +24,7 @@ useEffect( ()=>{
 
   return (
     <div>
-      <MiContext.Provider value={{dataPoke, setdataPoke}}>
+      <MiContext.Provider value={{dataPoke, setDataPoke}}>
       <NavBar/>
       <AppRouter/>
       </MiContext.Provider>

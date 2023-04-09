@@ -3,7 +3,7 @@ import React from 'react'
 const Listado = () => {
   return (
     <div>
-      <h3>Lista</h3>
+      <h3>Página de Lista</h3>
     </div>
   )
 }
