@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { MiContext } from '../context/MiContext';
+/*import { pokepro } from '../data/getDataPokemon';*/
 
 const DetaPoke = () => {
 

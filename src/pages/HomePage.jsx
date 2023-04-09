@@ -7,7 +7,7 @@ const {dataPoke, setdataPoke} = useContext(MiContext)
 
   return (
     <div>
-      <h2>Página de home</h2>
+      
    
     <div className='container mt-4'>
         <div className='row d-flex justify-content-between gap-5'>
