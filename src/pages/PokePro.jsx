@@ -6,7 +6,7 @@ const PokePro = ({id, name, url, image}) => {
     const navigate = useNavigate()
 
 const HandleClick = ()=>{
-    navigate (`pokemones/${url}`)
+    navigate (`pokemones/${name}`)
 }
 
   return (

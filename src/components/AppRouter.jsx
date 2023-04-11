@@ -11,7 +11,7 @@ const AppRouter = () => {
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='listado' element={<Listado/>}/>
-        <Route path='pokemones/:url' element={<DetaPoke/>}/>
+        <Route path='pokemones/:name' element={<DetaPoke/>}/>
       </Routes >
     </div>
   )

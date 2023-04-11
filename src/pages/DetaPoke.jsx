@@ -7,8 +7,8 @@ const DetaPoke = () => {
 
     const {dataPoke} = useContext(MiContext)
 
-    const {url} = useParams();
-    const pokemonesDetaPoke = dataPoke.find(item => item.url == url)
+    const {name} = useParams();
+    const pokemonesDetaPoke = dataPoke.find(item => item.name == name)
     
     
     
