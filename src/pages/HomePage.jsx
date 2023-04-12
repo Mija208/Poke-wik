@@ -9,7 +9,7 @@ const {dataPoke, setDataPoke} = useContext(MiContext)
     
      <div className='container mt-'>
         <div className='row d-flex justify-content-between gap-5'>
-         {dataPoke.map(poke=> <PokePro key={poke.name} {...poke}/>)}
+         {dataPoke.map(poke=> <PokePro key={poke.id} poke={poke}/>)}
         </div>
     </div>
     

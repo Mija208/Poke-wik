@@ -7,7 +7,7 @@ import AppRouter from './components/AppRouter';
 /*import { pokepro } from './data/getDataPokemon'*/
 import { MiContext } from './context/MiContext';
 
-const urlApi = 'https://pokeapi.co/api/v2/pokemon/'
+const urlApi = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0'
 const App = () => {
   const [dataPoke, setDataPoke] = useState ([]);
 
@@ -16,6 +16,15 @@ const getData = async()=>{
   const data = await res.json()
   setDataPoke(data.results)
   
+  const promises = data.results.map( async(poke)=>{
+    const res = await fetch(poke.url)
+    const data = res.json ()
+    return data 
+  })
+
+  const results = await Promise.all(promises)
+  setDataPoke(results)
+
 }
 
 useEffect( ()=>{
